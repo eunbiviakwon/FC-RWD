@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 1em;
+    font-weight: 400;
+    box-sizing: border-box;
+}
+.container{
+    background: silver;
+    display: grid;
+    
+}
+.header{
+    background: yellow;
+    grid-area: head;
+}
+.navigation{
+    background: pink;
+    grid-area: nav;
+}
+.content{
+    background: skyblue;
+    grid-area: content;
+}
+.ad{
+    background: lime;
+    grid-area: ad;
+}
+.footer{
+    background: orange;
+    grid-area: foot;
+}
+/* 모바일 레이아웃 */
+@media screen and (max-width: 800px){
+    .container{
+     grid-template-columns: 1fr 1fr;
+     grid-template-rows: repeat(5, minmax(50px, auto));
+     grid-template-areas: "head head"
+     "nav nav"
+     "ad content"
+     "foot foot" ;
+    }
+
+.content{
+    height: calc(100vh - 150px);
+}
+   
+}
+
+@media screen and (min-width: 801px){
+.container{
+    max-width: 1600px;
+    margin: 0 auto;
+    grid-template-columns: 1fr 3fr 1fr;
+    /* grid-template-rows: repeat(3, minmax(50px, auto)); */
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas: "head head head"
+    "nav content ad"
+    "foot foot foot";
+}
+.navigation, .content, .ad{
+    height: calc(100vh - 100px);
+}
+
+}
+
+/* 1600*/
