@@ -1,155 +1,26 @@
-@charset "utf-8"
-/* 모든 디바이스 */
-*{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    font-size: 1em;
-    font-weight: 400;
+@charset "utf-8";
+/* Mobile CSS */
+html{
+  font-size: 10px;
 }
-/* All 컨테이너 */
-.container{
-    background: silver;
-    display: flex;
-    /* flex-flow: row wrap */
-    flex-wrap: wrap;
-    flex-direction: row;
+body{
+  background-color: yellow;
 }
-/* All 헤더 */
-.header{
-    background: yellow;
-}
-/* All 내비게이션*/
-.navigation{
-    background: pink;
-}
-/* All 메인 콘텐츠*/
-.main-content{
-    background: skyblue;
-}
-/* All 광고*/
-.ad{
-    background: orange;
-}
-/* All 푸터*/
-.footer{
-    background: lime;
-}
-/* 모바일 스타일 */
-
-
-
-/* mobile 헤더 */
-.header, .navigation, .main-content, .ad, .footer{
-}
-   
-.header{
-    flex-basis: 100%;
-    height: 50px;
-}
-/* mobile 내비게이션*/
-.navigation{
-    flex-basis: 100%;
-    height: 50px;
-}
-/* mobile 메인 콘텐츠*/
-.main-content{
-    flex-basis: 100%;
-    height: calc(100vh - 200px);
-}
-/* mobile 광고*/
-.ad{
-    flex-basis: 100%;
-    height: 50px;
-}
-/* mobile 푸터*/
-.footer{
-    flex-basis: 100%;
-    height: 50px;
-}
-
-/* 태블릿 스타일 */
+/* Tablet, Laptop CSS */
 @media screen and (min-width: 50em){
-   /* 태블릿 헤더 */
-.header{
-  flex-basis: 70%;
-  order: -1;
+  html{
+    font-size: 14px;
+  }
+  body{
+    background-color: pink;
+  }
 }
-/* 태블릿 내비게이션*/
-.navigation{
-  flex-basis: 30%;
-  order: -1;
-}
-/* 태블릿 레이아웃 순서 */
-.header, .navigation, .ad{
-    order: -1
-}
-/* 태블릿 메인 콘텐츠*/
-.main-content{
-    flex-basis: 100%;
-    height: calc(100vh - 150px);
-}
-/* 태블릿 광고*/
-.ad{
-    flex-basis: 100%;
-    order: -1;
-}
-/* 태블릿 푸터*/
-.footer{
-    flex-basis: 100%;
-}
-}
-/* 랩탑 스타일*/
+/* Wide Screen CSS */
 @media screen and (min-width: 64em){
-.header{
-    order: -1;
-    flex-basis: 100%;
-}
-/* 랩탑 내비게이션*/
-.navigation{
-    order: -2;
-    flex-basis: 100%;
-}
-/* 랩탑 메인 콘텐츠*/
-.main-content{
-    flex-basis: 70%;
-}
-/* 랩탑 광고*/
-.ad{
-   order: -1;
-   flex-basis: 30%;
-   height: calc(100vh - 150px);
-}
-/* 랩탑 푸터*/
-.footer{
-    flex-basis: 100%;
-}
-}
-/* 와이드 스크린 스타일 */
-@media screen and (min-width: 100em){
-/* 와이드 레이아웃 순서 */
-.navigation, .ad{
-    order: 0;
-}
-.navigation, .main-content, .ad{
-    height: calc(100ch - 100px);
-}
-
-/* 와이드 내비게이션*/
-.navigation{
-    flex-basis: 30%;
-}
-/* 와이드 메인 콘텐츠*/
-.main-content{
-    flex-basis: 50%;
-}
-/* 와이드 광고*/
-.ad{ 
-    flex-basis: 20%;
-  
-}
-/* 와이드 푸터*/
-.footer{
-   
-}
+  html{
+    font-size: 20px;
+  }
+  body{
+    background-color: skyblue;
+  }
 }
